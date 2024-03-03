@@ -26,7 +26,7 @@
       rel="stylesheet"
     />
   </head>
-  <body class="container mx-auto">
+  <body class="container mx-auto  px-2">
     <!-- this is the header  -->
     <header class="mulish">
       <!-- navber  -->
@@ -150,10 +150,208 @@
         </div>
       </section>
     </header>
-     
-    <main>
 
+    <main>
+      <!--  post section -->
+      <section>
+        <!-- title of the section  -->
+        <div class="text-center space-y-4">
+          <h1 class="text-5xl font-bold text-[#12132D]">Let’s Discuss</h1>
+          <p class="inter">
+            Yes, you can run unit tests and view the results directly within the app. The <br />
+            integrated testing features allow for a streamlined .
+          </p>
+        </div>
+
+        <!-- all post in card container -->
+        <div class="flex gap-5 my-10 p-5 flex-col lg:flex-row">
+          <div id="card-container" class="space-y-4">
+            <div class="bg-[#797DFC1A] border-2 border-[#7D7DFC] p-4 rounded-xl">
+              <!-- left side  -->
+              <div class="flex flex-col lg:flex-row gap-5">
+                <!-- profile images  -->
+                <div class="avatar online mx-auto w-24 h-24">
+                  <div class="rounded-full">
+                    <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                  </div>
+                </div>
+
+                <!-- discription  -->
+                <div class="">
+                  <div class="p-5 border-b-2 border-dashed text-center lg:text-left space-y-3">
+                    <p class="inter font-medium text-xs lg:text-lg">
+                      #<span>Music </span>Author : <span>Awlad Hossain</span>
+                    </p>
+                    <h1 class="lg:text-2xl font-bold mulish text-[#12132D]">
+                      10 Kids Unaware of Their Halloween Costume
+                    </h1>
+                    <p class="inter">
+                      It’s one thing to subject yourself to ha Halloween costume mishap because, hey that’s your
+                      prerogative
+                    </p>
+                  </div>
+                  <!-- conmments viewrs and time  -->
+                  <div class="flex justify-between py-5 lg:p-5 items-center">
+                    <div class="flex gap-3 lg:gap-5">
+                      <div class="flex gap-3">
+                        <img src="images/Vector.png" alt="" />
+                        <span class="inter">560</span>
+                      </div>
+
+                      <div class="flex gap-3">
+                        <img src="images/Group 16.png" alt="" />
+                        <span class="inter">560</span>
+                      </div>
+
+                      <div class="flex gap-3">
+                        <img src="images/Group 18.png" alt="" />
+                        <p class="inter"><span class="inter">5</span> min</p>
+                      </div>
+                    </div>
+                    <div>
+                      <img src="images/email 1.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- rigth side  -->
+          <div class="bg-[#12132D0D] p-3 space-y-5 rounded-lg">
+            <div class="flex justify-between">
+              <h1 class="mulish text-3xl text-[#12132D] font-bold">Title</h1>
+              <div class="flex gap-2 items-center">
+                <img src="images/Frame.png" alt="" />
+                <p class="inter text-xl">Mark as read (<span>4</span>)</p>
+              </div>
+            </div>
+
+            <div id="item-container">
+              <div class="flex justify-between bg-white p-5 rounded-xl">
+                <h1 class="lg:text-2xl mulish text-[#12132D]">10 Kids Unaware of Their Halloween Costume</h1>
+                <div class="flex items-center p-2">
+                  <img src="images/Group 16.png" alt="" />
+                  <span class="inter">560</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+     
+
+      <!-- join forun section  -->
+      <section class="my-24">
+        <div class="lg:h-[550px] bg-[#12132D] mx-auto rounded-xl my-20">
+            <div class="py-8 lg:py-24 lg:px-20 flex lg:flex-row flex-col justify-between space-y-10 items-center rounded-xl"
+            >
+                          <!-- left side  -->
+           <div>
+            <div class="lg:py-10 py-4 lg:px-10 px-2 lg:space-y-4 space-y-8">
+                <h1 class="lg:text-7xl mulish text-4xl font-extrabold text-white leading-tight">
+                    Join Our Forum
+                </h1>
+                <p class="mulish">
+                    Share your favorite opinion and win and wp forum coffee mug! Yes, you can run unit tests and view the results directly within the app. 
+                </p>
+                <div class="">
+                  <button class="bg-[#7D7DFC] mulish text-white px-5 py-3 font-bold rounded-3xl">
+                    Registered Now
+                  </button>
+                </div>
+           </div>
+            </div>
+            <div>
+                <img src="images/joinforum.png" alt="">
+            </div>
+            </div>
+      </section>
+
+      <!-- letest post section  -->
+      <section class="">
+           <!-- title of the section  -->
+        <div class="text-center space-y-4">
+            <h1 class="text-5xl font-bold text-[#12132D]">Latest Posts</h1>
+            <p class="inter">
+              Yes, you can run unit tests and view the results directly within the app. The <br />
+              integrated testing features allow for a streamlined .
+            </p>
+          </div>
+            
+          <!-- letest post card  -->
+
+          <div id="letest-post-card" class="my-10 grid grid-cols-1 lg:grid-cols-3 gap-3 bg">
+            <!-- card one  -->
+            <div class="card bg-[#FFFFFF] text-[#12132D99]  border-2 border-[#12132D26]  p-5">
+                <figure><img class="rounded-xl" src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                <div class=" space-y-4 p-5">
+                  <span><i class="fa-regular fa-calendar"></i></span>
+                  <span class="mulish lg:text-xl">29 January 2024</span>
+                 <h1 class="lg:text-3xl text-2xl font-bold text-[#12132D]">What will a mars habitat force that impact in our daily life!!!</h1>
+                 <p class="mulish lg:text-xl">Yes, you can run unit tests and view the results directly within the app. </p>
+                  <div class="flex items-center gap-3">
+                    <img class="rounded-full w-20 h-20" src="https://images.unsplash.com/photo-1513427123250-82a01b806f1b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D" alt="">
+                    <div>
+                        <h1 class="lg:text-2xl text-[#12132D] font-bold ">Cameron Williamson</h1>
+                        <p class="lg:text-xl mulish ">Unknown</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+             <!-- card two -->
+             <div class="card bg-white text-[#12132D99]  shadow-xl p-5">
+                <figure><img class="rounded-xl" src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                <div class=" space-y-4 p-5">
+                  <span><i class="fa-regular fa-calendar"></i></span>
+                  <span class="mulish lg:text-xl">29 January 2024</span>
+                 <h1 class="lg:text-3xl text-2xl font-bold text-[#12132D]">What will a mars habitat force that impact in our daily life!!!</h1>
+                 <p class="mulish lg:text-xl">Yes, you can run unit tests and view the results directly within the app. </p>
+                  <div class="flex items-center gap-3">
+                    <img class="rounded-full w-20 h-20" src="https://images.unsplash.com/photo-1513427123250-82a01b806f1b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D" alt="">
+                    <div>
+                        <h1 class="lg:text-2xl text-[#12132D] font-bold ">Cameron Williamson</h1>
+                        <p class="lg:text-xl mulish ">Unknown</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- card three  -->
+              <div class="card bg-white text-[#12132D99]  shadow-xl p-5">
+                <figure><img class="rounded-xl" src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                <div class=" space-y-4 p-5">
+                  <span><i class="fa-regular fa-calendar"></i></span>
+                  <span class="mulish lg:text-xl">29 January 2024</span>
+                 <h1 class="lg:text-3xl text-2xl font-bold text-[#12132D]">What will a mars habitat force that impact in our daily life!!!</h1>
+                 <p class="mulish lg:text-xl">Yes, you can run unit tests and view the results directly within the app. </p>
+                  <div class="flex items-center gap-3">
+                    <img class="rounded-full w-20 h-20" src="https://images.unsplash.com/photo-1513427123250-82a01b806f1b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D" alt="">
+                    <div>
+                        <h1 class="lg:text-2xl text-[#12132D] font-bold ">Cameron Williamson</h1>
+                        <p class="lg:text-xl mulish ">Unknown</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+      </section>
     </main>
+
+    <footer class="bg-[#a6a4a420] p-12 mulish">
+        <div class="text-center space-y-3 border-b-2 border-dashed p-8">
+            <img class="mx-auto" src="images/logo.png" alt="">
+            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots <br> in a piece of classical Latin literature from 45 BC</p>
+            <div class="space-x-6">
+               <span><i class="fa-brands fa-twitter"></i></span>
+               <span><i class="fa-brands fa-facebook-f"></i></span>
+               <span><i class="fa-brands fa-instagram"></i></span>
+               <span><i class="fa-brands fa-github"></i></span>
+            </div>
+        </div>
+        <div class="text-center p-5">
+            <p>2024, All Rights Reserved.</p>
+        </div>
+    </footer>
     <script src="js/index.js"></script>
   </body>
 </html>
