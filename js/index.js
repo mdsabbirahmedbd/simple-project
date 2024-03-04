@@ -10,7 +10,7 @@ const letestPost = async () => {
                 <figure><img class="rounded-xl " src="${data.cover_image}" alt="Shoes" /></figure>
                 <div class=" space-y-4 p-5">
                   <span><i class="fa-regular fa-calendar"></i></span>
-                  <span class="mulish lg:text-xl">${data.author.posted_date || 'No pablish Date'}</span>
+                  <span class="mulish lg:text-xl">${data.author.posted_date || 'No publish date'}</span>
                  <h1 class="lg:text-3xl text-2xl font-bold text-[#12132D]">${data.title}</h1>
                  <p class="mulish lg:text-xl">${data.description}</p>
                   <div class="flex items-center gap-3">
