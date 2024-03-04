@@ -66,13 +66,8 @@ const allDataDisplay = async () => {
       isOnline.classList.add('avatar')
       isOnline.classList.add('offline')
     }
-  
-
-
     // console.log(element);
   });
-
-
 };
 
 allDataDisplay();
