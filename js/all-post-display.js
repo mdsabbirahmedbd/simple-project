@@ -12,7 +12,7 @@ const allDataDisplay = async () => {
     <div class="flex flex-col lg:flex-row  gap-5">
       <!-- profile images  -->
     
-     <div id="isOnline" class="avatar online mx-auto w-24 h-24">
+     <div id="isOnline" class="${element.isActive ? 'avatar online' : 'avatar offline'} mx-auto w-24 h-24">
      <div class="rounded-full ">
        <img class="" src="${element.image}" />
      </div>
@@ -57,16 +57,6 @@ const allDataDisplay = async () => {
     </div>
   </div>`;
     cardContainer.appendChild(div);
-         
-    const isOnline = document.getElementById('isOnline')
-    if(element.isActive){
-      isOnline.classList.add('avatar')
-      isOnline.classList.add('online')
-    }else{
-      isOnline.classList.add('avatar')
-      isOnline.classList.add('offline')
-    }
-    // console.log(element);
   });
 };
 
@@ -99,5 +89,8 @@ const displayItem = async (id) => {
     `;
   itemContainer.appendChild(div2);
 };
+
+
+
 
 

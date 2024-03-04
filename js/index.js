@@ -10,30 +10,39 @@ const letestPost = async () => {
                 <figure><img class="rounded-xl " src="${data.cover_image}" alt="Shoes" /></figure>
                 <div class=" space-y-4 p-5">
                   <span><i class="fa-regular fa-calendar"></i></span>
-                  <span class="mulish lg:text-xl">${data.author.posted_date}</span>
+                  <span class="mulish lg:text-xl">${data.author.posted_date || 'No pablish Date'}</span>
                  <h1 class="lg:text-3xl text-2xl font-bold text-[#12132D]">${data.title}</h1>
                  <p class="mulish lg:text-xl">${data.description}</p>
                   <div class="flex items-center gap-3">
                     <img class="rounded-full w-20 h-20" src="${data.profile_image}" alt="">
                     <div>
-                        <h1 class="lg:text-2xl text-[#12132D] font-bold ">${data.author.name}</h1>
-                        <p class="lg:text-xl mulish ">${data.author.designation}</p>
+                 <h1 class="lg:text-2xl text-[#12132D] font-bold ">${data.author.name}<h1>
+                        <p id="designation" class="lg:text-xl mulish ">${data.author.designation || 'Unknown'}</p>
                     </div>
                   </div>
                 </div>
               </div>
         `;
+    
     letestPostCardContainer.appendChild(div);
-    // console.log(data)
-  });
+    const designation  = document.getElementById('designation')
+    if(data.author.designation){
+        designation.innerText = data.author.designation
+    }else{
+        designation.innerText = 'Unknown'
+    }
+});
+console.log(datas)
 };
 letestPost();
 
 // seach and display item by category
 
 const seachCategory = async (seachText) => {
+    loadingSpinner(true)
   const respos = await fetch(`https://openapi.programming-hero.com/api/retro-forum/posts?category=${seachText}`);
   const data = await respos.json();
+
   const cardContainer = document.getElementById("card-container");
   cardContainer.innerHTML = ""
   data.posts.forEach((element) => {
@@ -43,7 +52,7 @@ const seachCategory = async (seachText) => {
     <div class="flex flex-col lg:flex-row  gap-5">
       <!-- profile images  -->
     
-     <div id="isOnline" class="avatar online mx-auto w-24 h-24">
+     <div id="isOnline" class="${element.isActive ? 'avatar online' : 'avatar offline'} mx-auto w-24 h-24">
      <div class="rounded-full ">
        <img class="" src="${element.image}" />
      </div>
@@ -89,16 +98,10 @@ const seachCategory = async (seachText) => {
   </div>`;
     cardContainer.appendChild(div);
          
-    const isOnline = document.getElementById('isOnline')
-    if(element.isActive){
-      isOnline.classList.add('avatar')
-      isOnline.classList.add('online')
-    }else{
-      isOnline.classList.add('avatar')
-      isOnline.classList.add('offline')
-    }
+ 
     // console.log(element);
   });
+  loadingSpinner(false)
 };
 
 const seachResult = () => {
@@ -109,3 +112,12 @@ const seachResult = () => {
   });
 };
 seachResult();
+
+const loadingSpinner = (isloading)=>{
+    const loading = document.getElementById('loading-spinner')
+    if(isloading){
+        loading.classList.remove('hidden')
+    }else{
+        loading.classList.add('hidden')
+    }
+}
